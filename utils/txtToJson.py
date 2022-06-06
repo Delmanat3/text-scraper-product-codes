@@ -1,5 +1,8 @@
 import json
-filename = 'wacked.txt'  # REMEMBER TO CHANGE INPUT FILE NAME
+
+# CLICK THE LITTLE PLAY BUTTON IN UPPER RIGHT HAND CORNER
+
+filename = 'wacked copy.csv'  # REMEMBER TO CHANGE INPUT FILE NAME
 dict1 = {}
 fields = ['id']  # ADDS A KEY TO PUT THE VALUES UNDER
 l = 1  # INDEX FOR KEY\S STARTS AT 1
@@ -9,7 +12,7 @@ with open(filename) as fh:
         print(description)
         sno = 'item'+str(l)
         i = 0
-        dict2 = {}
+        dict2 = frozenset ({})
         while i < len(fields):
             dict2[fields[i]] = description[i]
             i = i + 1
