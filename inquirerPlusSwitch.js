@@ -1,12 +1,18 @@
 const inquirer = require("inquirer");
-const txtCall=require('./txtCalls.js')
+const txtCall = require("./txtCalls.js");
 
 const questions = [
   {
     type: "list",
     name: "formating",
     message: "What format is the file you wish to mutilate?",
-    choices: ["JSON", "Txt", "Csv", "Xml", "steven if you need something else u can do it"],
+    choices: [
+      "JSON",
+      "Txt",
+      "Csv",
+      "Xml",
+      "steven if you need something else u can do it",
+    ],
   },
   {
     type: "input",
@@ -37,14 +43,14 @@ function init() {
     const endy = await inquirerResponses.uri;
     const inTitle = await inquirerResponses.inTitle;
     const format = await inquirerResponses.formating;
-    const breakpoint=await inquirerResponses.breakpoint
+    const breakpoint = await inquirerResponses.breakpoint;
     console.log(format);
     switch (format) {
       case "JSON":
         console.log("not yet");
         break;
       case "Txt":
-        txtCall(inTitle, inquirerResponses,breakpoint);
+        txtCall(inTitle, inquirerResponses, breakpoint);
         break;
       default:
         console.log("nope");

@@ -1,5 +1,1 @@
-const apiRoutes='./api/index.js'
-
-
-
-
+const apiRoutes = "./api/index.js";
