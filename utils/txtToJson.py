@@ -12,7 +12,7 @@ with open(filename) as fh:
         print(description)
         sno = 'item'+str(l)
         i = 0
-        dict2 = frozenset ({})
+        dict2 = {}
         while i < len(fields):
             dict2[fields[i]] = description[i]
             i = i + 1
